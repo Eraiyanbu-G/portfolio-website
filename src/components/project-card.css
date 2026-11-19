@@ -1,0 +1,139 @@
+.project-card {
+  min-width: 0;
+}
+
+.project-card__visual {
+  position: relative;
+  display: grid;
+  min-height: 15rem;
+  aspect-ratio: 1.65 / 1;
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid rgb(9 7 5 / 14%);
+  background-color: var(--color-muted-green);
+  background-image:
+    linear-gradient(to right, rgb(9 7 5 / 6%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(9 7 5 / 6%) 1px, transparent 1px);
+  background-size: 2.5rem 2.5rem;
+  color: var(--color-ink);
+}
+
+.project-card__visual::before,
+.project-card__visual::after {
+  position: absolute;
+  content: '';
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  opacity: 0.32;
+}
+
+.project-card__visual::before {
+  width: 62%;
+  aspect-ratio: 1;
+  transform: translate(35%, 18%);
+}
+
+.project-card__visual::after {
+  width: 42%;
+  aspect-ratio: 1;
+  transform: translate(-60%, -25%);
+}
+
+.project-card__visual--attendance {
+  background-color: var(--color-brown);
+  color: var(--color-background);
+}
+
+.project-card__visual--campus {
+  background-color: var(--color-background);
+  color: var(--color-muted-green);
+}
+
+.project-card__visual--campus .project-card__visual-note {
+  color: var(--color-ink);
+}
+
+.project-card__visual--portfolio {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+.project-card__mark {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 10vw, 10rem);
+  line-height: 0.85;
+}
+
+.project-card__visual-note {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+}
+
+.project-card__body {
+  padding-top: 1.25rem;
+}
+
+.project-card__index {
+  margin-bottom: 0.6rem;
+  color: var(--color-muted-green);
+  font-size: var(--type-small);
+  text-transform: uppercase;
+}
+
+.project-card__title {
+  color: var(--color-background);
+  font-family: var(--font-body);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.project-card__subtitle {
+  margin-top: 0.25rem;
+  color: var(--color-background);
+  font-size: var(--type-small);
+}
+
+.project-card__description {
+  max-width: 42rem;
+  margin-top: 0.7rem;
+  color: rgb(235 234 232 / 78%);
+  font-size: var(--type-small);
+}
+
+.project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card__technologies li {
+  padding: 0.25rem 0.55rem;
+  border: 1px solid rgb(235 234 232 / 35%);
+  color: var(--color-background);
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 40rem) {
+  .project-card__visual {
+    min-height: 12.5rem;
+  }
+
+  .project-card__mark {
+    font-size: clamp(4rem, 24vw, 6rem);
+  }
+}

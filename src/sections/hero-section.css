@@ -1,0 +1,138 @@
+.hero-section {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-section__layout {
+  display: grid;
+  min-height: min(68svh, 48rem);
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  align-items: end;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.hero-section__identity {
+  padding-bottom: 0.25rem;
+}
+
+.hero-section__eyebrow,
+.section-kicker {
+  color: var(--color-accent);
+  font-size: var(--type-small);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-section__name {
+  margin-top: 1.15rem;
+  font-size: clamp(var(--type-display), 10vw, 10rem);
+  line-height: 0.86;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hero-section__intro {
+  max-width: 34rem;
+  padding: 0.25rem 0 0.4rem clamp(1.25rem, 2.5vw, 2.5rem);
+  border-left: 2px solid var(--color-accent);
+}
+
+.hero-section__role {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-section__description {
+  margin-top: 1rem;
+  color: var(--color-brown);
+}
+
+.hero-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: var(--type-small);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.button--primary {
+  padding: 0.7rem 1.15rem;
+  border: 1px solid var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-background);
+}
+
+.button--primary:hover {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.button--text {
+  color: var(--color-ink);
+}
+
+.button--text:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 64rem) {
+  .hero-section__layout {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-block: clamp(4rem, 10vw, 7rem);
+  }
+
+  .hero-section__intro {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .hero-section__layout {
+    gap: 2rem;
+  }
+
+  .hero-section__name {
+    font-size: clamp(var(--type-display), 12vw, 5rem);
+  }
+
+  .hero-section__intro {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 22.5rem) {
+  .hero-section__eyebrow {
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+
+  .hero-section__actions {
+    gap: 0.5rem;
+  }
+
+  .button--primary {
+    padding-inline: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

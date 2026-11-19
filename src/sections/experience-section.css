@@ -1,0 +1,103 @@
+.experience-section {
+  background: var(--color-brown);
+  color: var(--color-background);
+}
+
+.experience-section h2,
+.experience-entry__title {
+  color: var(--color-background);
+}
+
+.experience-section .section-kicker {
+  color: var(--color-background);
+}
+
+.experience-section__heading {
+  margin-bottom: clamp(2rem, 4vw, 3.75rem);
+}
+
+.experience-section__heading h2 {
+  margin-top: 0.6rem;
+}
+
+.experience-list {
+  border-top: 1px solid rgb(235 234 232 / 35%);
+}
+
+.experience-entry {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.45fr) minmax(0, 1.55fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  padding-block: clamp(1.75rem, 4vw, 3.5rem);
+  border-bottom: 1px solid rgb(235 234 232 / 35%);
+}
+
+.experience-entry__marker {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--color-background);
+  font-size: var(--type-small);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.experience-entry__marker span:first-child {
+  color: var(--color-background);
+}
+
+.experience-entry__title {
+  font-family: var(--font-body);
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.experience-entry__organization {
+  margin-top: 0.5rem;
+  color: var(--color-background);
+  font-size: 1.05rem;
+}
+
+.experience-entry__period {
+  margin-top: 0.35rem;
+  color: rgb(235 234 232 / 72%);
+  font-size: var(--type-small);
+}
+
+.experience-entry__tasks {
+  margin-top: 1.25rem;
+}
+
+.experience-entry__tasks p {
+  color: var(--color-background);
+  font-size: var(--type-small);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.experience-entry__tasks ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-entry__tasks li {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgb(235 234 232 / 35%);
+  font-size: var(--type-small);
+}
+
+@media (max-width: 40rem) {
+  .experience-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .experience-entry__marker {
+    gap: 0.75rem;
+  }
+}

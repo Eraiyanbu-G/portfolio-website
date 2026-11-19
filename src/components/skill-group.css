@@ -1,0 +1,50 @@
+.skill-group {
+  min-width: 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.skill-group__index {
+  color: var(--color-accent);
+  font-size: var(--type-small);
+  font-weight: 700;
+}
+
+.skill-group__title {
+  margin-top: 0.65rem;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.skill-group__list {
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-group__item {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 600;
+}
+
+.skill-group__level {
+  flex: 0 0 auto;
+  color: var(--color-brown);
+  font-size: var(--type-small);
+  font-weight: 400;
+  text-align: right;
+}
+
+@media (max-width: 40rem) {
+  .skill-group__item {
+    min-height: 2.6rem;
+  }
+}
